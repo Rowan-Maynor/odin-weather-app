@@ -33,3 +33,7 @@ body{
   text-align: center;
   margin-top: 5px;
 }
+
+#search-icon {
+  height: 40px;
+}
