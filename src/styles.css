@@ -16,7 +16,7 @@ body{
   display: flex;
 }
 
-#city-search-container {
+#header {
   justify-content: center;
   align-items: center;
 }
@@ -36,4 +36,5 @@ body{
 
 #search-icon {
   height: 40px;
+  position: absolute;
 }
