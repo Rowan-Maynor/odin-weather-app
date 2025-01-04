@@ -1,3 +1,5 @@
+
+
 //City needs to use underscores instead of spaces, use regex to clean input.
 //Using all lowercase will still return proper capitalized city data.
 async function getWeather() {
