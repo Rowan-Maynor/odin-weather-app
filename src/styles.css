@@ -28,13 +28,21 @@ body{
   border: none;
   border-bottom: 2px lightgray solid;
   padding: 0;
+  padding-right: 55px;
+  padding-left: 10px;
   color: white;
   font-size: 2em;
   text-align: center;
   margin-top: 5px;
 }
 
+#city-search-container{
+  position: relative;
+}
+
 #search-icon {
   height: 40px;
   position: absolute;
+  right: 6px;
+  top: 8px;
 }
