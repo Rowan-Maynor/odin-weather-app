@@ -22,10 +22,11 @@ body{
 }
 
 #city-search-input {
-  background-color: rgb(211, 211, 211, 10%);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 50px;
   width: max(300px, 35vw);
   border: none;
+  outline: none;
   border-bottom: 2px lightgray solid;
   padding: 0;
   padding-right: 55px;
