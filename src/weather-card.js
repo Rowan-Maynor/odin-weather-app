@@ -25,7 +25,7 @@ function createCardDay(parent, day) {
 function createCurrentTemp(parent, conditions, temp) {
   const currentTempContainer = document.createElement("div");
   currentTempContainer.classList = "flex-container current-temp-container";
-  
+
   const tempDataContainer = document.createElement("div");
   tempDataContainer.classList = "flex-container temp-data-container";
   currentTempContainer.append(tempDataContainer);
@@ -42,7 +42,7 @@ function createCurrentTemp(parent, conditions, temp) {
   tempDataContainer.append(currentTemp);
 
   const conditionsText = document.createElement("p");
-  conditionsText.classList = "conditions-text"
+  conditionsText.classList = "conditions-text";
   conditionsText.textContent = conditions;
   currentTempContainer.append(conditionsText);
 

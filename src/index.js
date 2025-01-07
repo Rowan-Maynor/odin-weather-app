@@ -8,7 +8,7 @@ import createWeatherCard from "./weather-card";
 //Remove when website finished
 let data;
 
-if (sessionStorage.getItem("data")){
+if (sessionStorage.getItem("data")) {
   console.log(JSON.parse(sessionStorage.getItem("data")));
   data = JSON.parse(sessionStorage.getItem("data"));
 } else {
@@ -25,6 +25,6 @@ async function getWeather(city) {
   data = JSON.parse(sessionStorage.getItem("data"));
 }
 
-for(let i = 0; i < 14; i++){
+for (let i = 0; i < 14; i++) {
   createWeatherCard(data.days[i]);
 }

@@ -1,10 +1,10 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
   --bg-color: linear-gradient(rgb(6, 6, 30), rgb(14, 14, 60) 70%);
   /* 
   night : rgb(6, 6, 30), rgb(14, 14, 60)
@@ -49,7 +49,7 @@ body{
   margin-top: 5px;
 }
 
-#city-search-container{
+#city-search-container {
   position: relative;
 }
 
@@ -68,7 +68,7 @@ body{
   gap: 15px;
 }
 
-.weather-card-container{
+.weather-card-container {
   background-color: rgb(6, 6, 30);
   border: white solid 4px;
   border-radius: 15px;
@@ -83,12 +83,12 @@ body{
   margin-bottom: 40px;
 }
 
-.current-temp-container{
+.current-temp-container {
   flex-direction: column;
   text-align: center;
 }
 
-.temp-data-container{
+.temp-data-container {
   align-items: center;
   flex: 1;
   margin-bottom: 10px;
