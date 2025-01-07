@@ -64,3 +64,9 @@ body{
   width: 90vw;
   gap: 10px;
 }
+
+.weather-card-container{
+  background-color: rgb(6, 6, 30);
+  border: white solid 4px;
+  border-radius: 15px;
+}
