@@ -26,25 +26,25 @@ function createCurrentTemp(parent, conditions, temp) {
   const currentTempContainer = document.createElement("div");
   currentTempContainer.classList = "flex-container current-temp-container";
   
-  //Replace src with ${conditions}
-  const conditionsIcon = document.createElement("img");
-  conditionsIcon.classList = "conditions-icon";
-  conditionsIcon.src = icon;
-  currentTempContainer.append(conditionsIcon);
-
   const tempDataContainer = document.createElement("div");
   tempDataContainer.classList = "flex-container temp-data-container";
   currentTempContainer.append(tempDataContainer);
 
-  const conditionsText = document.createElement("p");
-  conditionsText.classList = "conditions-text"
-  conditionsText.textContent = conditions;
-  tempDataContainer.append(conditionsText);
+  //Replace src with ${conditions}
+  const conditionsIcon = document.createElement("img");
+  conditionsIcon.classList = "conditions-icon";
+  conditionsIcon.src = icon;
+  tempDataContainer.append(conditionsIcon);
 
   const currentTemp = document.createElement("p");
   currentTemp.classList = "current-temp";
   currentTemp.textContent = temp;
   tempDataContainer.append(currentTemp);
+
+  const conditionsText = document.createElement("p");
+  conditionsText.classList = "conditions-text"
+  conditionsText.textContent = conditions;
+  currentTempContainer.append(conditionsText);
 
   parent.append(currentTempContainer);
 }
