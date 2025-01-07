@@ -10,6 +10,7 @@ body{
   */
   background-image: var(--bg-color);
   height: 100vh;
+  color: white;
 }
 
 .flex-container {
