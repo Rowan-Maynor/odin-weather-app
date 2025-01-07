@@ -1,4 +1,5 @@
 import "./styles.css";
+import createWeatherCard from "./weather-card";
 
 //City needs to use underscores instead of spaces, use regex to clean input.
 //Using all lowercase will still return proper capitalized city data.
@@ -19,3 +20,5 @@ async function getWeather(city) {
   sessionStorage.setItem("data", JSON.stringify(weatherData));
   console.log(JSON.parse(sessionStorage.getItem("data")));
 }
+
+createWeatherCard();
