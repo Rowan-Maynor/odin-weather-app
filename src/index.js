@@ -21,4 +21,6 @@ async function getWeather(city) {
   console.log(JSON.parse(sessionStorage.getItem("data")));
 }
 
-createWeatherCard();
+for(let i = 0; i < 14; i++){
+  createWeatherCard();
+}
