@@ -38,7 +38,7 @@ function createCurrentTemp(parent, conditions, temp) {
 
   const currentTemp = document.createElement("p");
   currentTemp.classList = "current-temp";
-  currentTemp.textContent = temp;
+  currentTemp.textContent = temp + "F";
   tempDataContainer.append(currentTemp);
 
   const conditionsText = document.createElement("p");

@@ -83,24 +83,24 @@ body{
   margin-bottom: 40px;
 }
 
-.temp-data-container{
+.current-temp-container{
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+}
+
+.temp-data-container{
+  align-items: center;
   flex: 1;
+  margin-bottom: 10px;
 }
 
 .conditions-icon {
   width: 80px;
-}
-
-.conditions-icon {
-  margin-left: 15px;
+  margin-right: 5px;
 }
 
 .conditions-text {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .current-temp {
