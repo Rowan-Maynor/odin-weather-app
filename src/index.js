@@ -6,8 +6,11 @@ import createWeatherCard from "./weather-card";
 
 //temporarily store data so im not blowing API tokens with every reload
 //Remove when website finished
+let data;
+
 if (sessionStorage.getItem("data")){
   console.log(JSON.parse(sessionStorage.getItem("data")));
+  data = JSON.parse(sessionStorage.getItem("data"));
 } else {
   getWeather("Atlanta");
 }
@@ -19,8 +22,9 @@ async function getWeather(city) {
   const weatherData = await response.json();
   sessionStorage.setItem("data", JSON.stringify(weatherData));
   console.log(JSON.parse(sessionStorage.getItem("data")));
+  data = JSON.parse(sessionStorage.getItem("data"));
 }
 
 for(let i = 0; i < 14; i++){
-  createWeatherCard();
+  createWeatherCard(data.days[i]);
 }

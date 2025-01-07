@@ -1,7 +1,7 @@
-export default function createWeatherCard() {
+export default function createWeatherCard(data) {
   const weatherGrid = document.querySelector("#weather-grid");
   const cardContainer = createCardContainer(weatherGrid);
-  createCardDay(cardContainer, "test");
+  createCardDay(cardContainer, data.datetime);
 }
 
 function createCardContainer(parent) {
