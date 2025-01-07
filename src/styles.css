@@ -28,6 +28,7 @@ body{
 #header {
   justify-content: center;
   align-items: center;
+  margin-bottom: 75px;
 }
 
 #city-search-input {
