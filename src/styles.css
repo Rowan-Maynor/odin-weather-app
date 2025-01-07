@@ -59,6 +59,8 @@ body{
 
 #weather-grid {
   grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 350px 350px;
   justify-content: center;
-  width: 80vw;
+  width: 90vw;
+  gap: 10px;
 }
