@@ -110,11 +110,13 @@ body {
 .hi-low-temp-container {
   margin-top: auto;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .hi-temp-container, .low-temp-container {
   flex-direction: column;
+  text-align: center;
+  gap: 5px;
 }
 
 .hi-temp-value, .low-temp-value {
@@ -122,5 +124,5 @@ body {
 }
 
 .hi-temp-text, .low-temp-text {
-  font-size: 1.5em;
+  font-size: 1em;
 }
