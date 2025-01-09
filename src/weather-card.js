@@ -5,6 +5,7 @@ export default function createWeatherCard(data) {
   const cardContainer = createCardContainer(weatherGrid);
   createCardDay(cardContainer, data.datetime);
   createCurrentTemp(cardContainer, data.conditions, data.temp);
+  createHiLowTemp(cardContainer, data.tempmax, data.tempmin);
 }
 
 function createCardContainer(parent) {
@@ -47,4 +48,39 @@ function createCurrentTemp(parent, conditions, temp) {
   currentTempContainer.append(conditionsText);
 
   parent.append(currentTempContainer);
+}
+
+function createHiLowTemp(parent, highTemp, lowTemp) {
+  const hiLowTempContainer = document.createElement("div");
+  hiLowTempContainer.classList = "flex-container hi-low-temp-container";
+
+  const hiTempContainer = document.createElement("div");
+  hiTempContainer.classList = "flex-container hi-temp-container";
+  hiLowTempContainer.append(hiTempContainer);
+
+  const hiTempValue = document.createElement("p");
+  hiTempValue.classList = "hi-temp-value";
+  hiTempValue.textContent = highTemp;
+  hiTempContainer.append(hiTempValue);
+
+  const hiTempText = document.createElement("p");
+  hiTempText.classList = "hi-temp-text";
+  hiTempText.textContent = "High";
+  hiTempContainer.append(hiTempText);
+
+  const lowTempContainer = document.createElement("div");
+  lowTempContainer.classList = "flex-container low-temp-container";
+  hiLowTempContainer.append(lowTempContainer);
+
+  const lowTempValue = document.createElement("p");
+  lowTempValue.classList = "low-temp-value";
+  lowTempValue.textContent = lowTemp;
+  lowTempContainer.append(lowTempValue);
+
+  const lowTempText = document.createElement("p");
+  lowTempText.classList = "low-temp-text";
+  lowTempText.textContent = "Low";
+  lowTempContainer.append(lowTempText);
+
+  parent.append(hiLowTempContainer);
 }
