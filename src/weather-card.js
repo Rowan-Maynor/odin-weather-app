@@ -1,4 +1,5 @@
 import clearIcon from "./assets/icons/clear.svg";
+import partiallyCloudyIcon from "./assets/icons/partially-cloudy.svg";
 
 export default function createWeatherCard(data) {
   const weatherGrid = document.querySelector("#weather-grid");
@@ -86,8 +87,12 @@ function createHiLowTemp(parent, highTemp, lowTemp) {
 }
 
 function weatherCondition(conditions){
-  if(conditions.includes("clear")){
+  let conditionsArray = conditions.split(", ");
+
+  if (conditionsArray.includes("Clear")) {
     return clearIcon;
+  } else if (conditionsArray.includes("Partially cloudy")) {
+    return partiallyCloudyIcon;
   } else {
     //This is temporary so things dont break, remove when all icons are set
     return clearIcon;
