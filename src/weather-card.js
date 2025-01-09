@@ -1,4 +1,4 @@
-import icon from "./assets/icons/clear.svg";
+import clearIcon from "./assets/icons/clear.svg";
 
 export default function createWeatherCard(data) {
   const weatherGrid = document.querySelector("#weather-grid");
@@ -34,7 +34,7 @@ function createCurrentTemp(parent, conditions, temp) {
   //Replace src with ${conditions}
   const conditionsIcon = document.createElement("img");
   conditionsIcon.classList = "conditions-icon";
-  conditionsIcon.src = icon;
+  conditionsIcon.src = weatherCondition(conditions);
   tempDataContainer.append(conditionsIcon);
 
   const currentTemp = document.createElement("p");
@@ -83,4 +83,13 @@ function createHiLowTemp(parent, highTemp, lowTemp) {
   lowTempContainer.append(lowTempValue);
 
   parent.append(hiLowTempContainer);
+}
+
+function weatherCondition(conditions){
+  if(conditions.includes("clear")){
+    return clearIcon;
+  } else {
+    //This is temporary so things dont break, remove when all icons are set
+    return clearIcon;
+  }
 }
