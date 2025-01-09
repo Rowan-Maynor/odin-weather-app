@@ -1,5 +1,6 @@
 import clearIcon from "./assets/icons/clear.svg";
 import partiallyCloudyIcon from "./assets/icons/partially-cloudy.svg";
+import snowIcon from "./assets/icons/snow.svg";
 
 export default function createWeatherCard(data) {
   const weatherGrid = document.querySelector("#weather-grid");
@@ -86,15 +87,24 @@ function createHiLowTemp(parent, highTemp, lowTemp) {
   parent.append(hiLowTempContainer);
 }
 
-function weatherCondition(conditions){
+function weatherCondition(conditions) {
   let conditionsArray = conditions.split(", ");
 
   if (conditionsArray.includes("Clear")) {
     return clearIcon;
+  } else if (
+    conditionsArray.includes("Snow") ||
+    conditionsArray.includes("Ice")
+  ) {
+    return snowIcon;
   } else if (conditionsArray.includes("Partially cloudy")) {
+  /*
+  Partially cloudy must be last because it can combo with other weather types.
+  This makes it the lowest priority.
+  */
     return partiallyCloudyIcon;
   } else {
-    //This is temporary so things dont break, remove when all icons are set
+    //This is temporary so things dont break, remove when all icons are set.
     return clearIcon;
   }
 }
