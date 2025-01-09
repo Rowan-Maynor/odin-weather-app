@@ -11,6 +11,7 @@ let data;
 if (sessionStorage.getItem("data")) {
   console.log(JSON.parse(sessionStorage.getItem("data")));
   data = JSON.parse(sessionStorage.getItem("data"));
+  generateCards();
 } else {
   getWeather("Atlanta");
 }
@@ -23,8 +24,11 @@ async function getWeather(city) {
   sessionStorage.setItem("data", JSON.stringify(weatherData));
   console.log(JSON.parse(sessionStorage.getItem("data")));
   data = JSON.parse(sessionStorage.getItem("data"));
+  generateCards();
 }
 
-for (let i = 0; i < 14; i++) {
-  createWeatherCard(data.days[i]);
+function generateCards() {
+  for (let i = 0; i < 14; i++) {
+    createWeatherCard(data.days[i]);
+  }
 }
