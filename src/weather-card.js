@@ -58,29 +58,29 @@ function createHiLowTemp(parent, highTemp, lowTemp) {
   hiTempContainer.classList = "flex-container hi-temp-container";
   hiLowTempContainer.append(hiTempContainer);
 
-  const hiTempValue = document.createElement("p");
-  hiTempValue.classList = "hi-temp-value";
-  hiTempValue.textContent = highTemp;
-  hiTempContainer.append(hiTempValue);
-
   const hiTempText = document.createElement("p");
   hiTempText.classList = "hi-temp-text";
   hiTempText.textContent = "High";
   hiTempContainer.append(hiTempText);
 
+  const hiTempValue = document.createElement("p");
+  hiTempValue.classList = "hi-temp-value";
+  hiTempValue.textContent = highTemp;
+  hiTempContainer.append(hiTempValue);
+
   const lowTempContainer = document.createElement("div");
   lowTempContainer.classList = "flex-container low-temp-container";
   hiLowTempContainer.append(lowTempContainer);
-
-  const lowTempValue = document.createElement("p");
-  lowTempValue.classList = "low-temp-value";
-  lowTempValue.textContent = lowTemp;
-  lowTempContainer.append(lowTempValue);
 
   const lowTempText = document.createElement("p");
   lowTempText.classList = "low-temp-text";
   lowTempText.textContent = "Low";
   lowTempContainer.append(lowTempText);
+
+  const lowTempValue = document.createElement("p");
+  lowTempValue.classList = "low-temp-value";
+  lowTempValue.textContent = lowTemp;
+  lowTempContainer.append(lowTempValue);
 
   parent.append(hiLowTempContainer);
 }
