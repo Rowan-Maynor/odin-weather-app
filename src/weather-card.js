@@ -1,4 +1,4 @@
-import icon from "./assets/icons/search-icon.svg";
+import icon from "./assets/icons/clear.svg";
 
 export default function createWeatherCard(data) {
   const weatherGrid = document.querySelector("#weather-grid");
