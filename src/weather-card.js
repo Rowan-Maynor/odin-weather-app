@@ -1,6 +1,7 @@
 import clearIcon from "./assets/icons/clear.svg";
 import partiallyCloudyIcon from "./assets/icons/partially-cloudy.svg";
 import snowIcon from "./assets/icons/snow.svg";
+import overcastIcon from "./assets/icons/overcast.svg";
 
 export default function createWeatherCard(data) {
   const weatherGrid = document.querySelector("#weather-grid");
@@ -97,8 +98,10 @@ function weatherCondition(conditions) {
     conditionsArray.includes("Ice")
   ) {
     return snowIcon;
+  } else if (conditionsArray.includes("Overcast")) {
+    return overcastIcon;
   } else if (conditionsArray.includes("Partially cloudy")) {
-  /*
+    /*
   Partially cloudy must be last because it can combo with other weather types.
   This makes it the lowest priority.
   */
