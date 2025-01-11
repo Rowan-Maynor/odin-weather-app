@@ -2,12 +2,13 @@ import "./styles.css";
 import createWeatherCard from "./weather-card";
 
 const cityName = document.querySelector("#city-name");
+const cityForm = document.querySelector("#city-form");
+const citySearch = document.querySelector("#city-search-input")
 
-
-
-getWeather("New York");
-
-
+cityForm.addEventListener("submit", (event) =>{
+  event.preventDefault();
+  getWeather(citySearch.value);
+});
 
 async function getWeather(city) {
   const response = await fetch(
