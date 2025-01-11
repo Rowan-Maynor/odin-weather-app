@@ -4,6 +4,13 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: all 0s 5000s;
+}
+
 body {
   --bg-color: linear-gradient(rgb(6, 6, 30), rgb(14, 14, 60) 70%);
   /* 
