@@ -30,7 +30,7 @@ body {
 #header {
   justify-content: center;
   align-items: center;
-  margin-bottom: 75px;
+  margin-bottom: 30px;
 }
 
 #city-search-input {
@@ -126,4 +126,9 @@ body {
 
 .hi-temp-text, .low-temp-text {
   font-size: 1em;
+}
+
+#city-name {
+  font-size: 4em;
+  margin-bottom: 30px;
 }
