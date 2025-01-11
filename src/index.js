@@ -1,9 +1,11 @@
+import removeChildren from "./remove-children";
 import "./styles.css";
 import createWeatherCard from "./weather-card";
 
 const cityName = document.querySelector("#city-name");
 const cityForm = document.querySelector("#city-form");
-const citySearch = document.querySelector("#city-search-input")
+const citySearch = document.querySelector("#city-search-input");
+const mainContent = document.querySelector("#content");
 
 cityForm.addEventListener("submit", (event) =>{
   event.preventDefault();
@@ -11,6 +13,7 @@ cityForm.addEventListener("submit", (event) =>{
 });
 
 async function getWeather(city) {
+  removeChildren(mainContent);
   const response = await fetch(
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&include=days&key=PLZNP3RT4T5J5E6TVMEXRGX6A&contentType=json`,
   );
