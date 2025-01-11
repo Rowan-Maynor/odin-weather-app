@@ -9,12 +9,15 @@
     <div class="flex-container" id="page-container">
       <div class="flex-container" id="header">
         <div id="city-search-container">
-          <input
-            type="text"
-            name="city"
-            id="city-search-input"
-            placeholder="City/ZipCode"
-          />
+          <form method="GET" id="city-form">
+            <input
+              type="text"
+              name="city"
+              id="city-search-input"
+              placeholder="City/ZipCode"
+            />
+            <button id="search-button" type="submit"></button>
+          </form>
           <img
             src="86c32af5828de049ca80.svg"
             alt="Search Icon"
@@ -22,7 +25,11 @@
           />
         </div>
       </div>
+      <div class="flex-container" id="city-name-container">
+        <p id="city-name"></p>
+      </div>
       <div id="content">
+        <p id="default-text">Please Enter A City</p>
         <div class="grid-container" id="weather-grid"></div>
       </div>
     </div>
