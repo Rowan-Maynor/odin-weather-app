@@ -151,3 +151,11 @@ body {
   z-index: 2;
   cursor: pointer;
 }
+
+#default-text {
+  position: absolute;
+  font-size: 6em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
