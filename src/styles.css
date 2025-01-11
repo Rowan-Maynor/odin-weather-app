@@ -137,4 +137,6 @@ body {
 #search-button {
   background-color: transparent;
   border: none;
+  z-index: 2;
+  cursor: pointer;
 }
