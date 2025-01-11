@@ -3,7 +3,11 @@ import createWeatherCard from "./weather-card";
 
 const cityName = document.querySelector("#city-name");
 
+
+
 getWeather("New York");
+
+
 
 async function getWeather(city) {
   const response = await fetch(
