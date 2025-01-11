@@ -10,10 +10,11 @@ async function getWeather(city) {
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&include=days&key=PLZNP3RT4T5J5E6TVMEXRGX6A&contentType=json`,
   );
   const weatherData = await response.json();
+  console.log(weatherData);
 
   for (let i = 0; i < 14; i++) {
     createWeatherCard(weatherData.days[i]);
   }
 
-  cityName.textContent = weatherData.address;
+  cityName.textContent = weatherData.resolvedAddress;
 }
